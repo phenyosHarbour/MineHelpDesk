@@ -53,3 +53,13 @@ This application has the potential for future customization to suit a range of b
 Disclaimer
 
 This application is provided as a demo and should not be considered a complete, production-ready solution. Its limited functionalities and configurations do not represent a fully-deployed IT support software product. Instead, this project serves as a foundational base, intended to visualize what a fully-developed application could achieve.
+
+Investigation
+
+The main components of the MineHelpDesk application are:
+
+* **Ticket submission**: Employees can submit IT support tickets by entering key details like name, department, workstation, and a description of the issue. 📝
+* **Admin panel**: Admins can review submitted tickets, update their status, and delete resolved tickets. 🛠️
+* **Status management**: Tickets can be marked as "Pending," "Resolved," or "High Priority" for streamlined support handling. 📊
+* **SQLite database**: Uses a simple SQLite database to store and manage ticket data. 🗄️
+* **Basic UI**: Built with Tkinter, providing a straightforward user interface for basic operations. 🖥️
