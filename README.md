@@ -60,7 +60,5 @@ The executable will be in the `dist/` folder.
 - Status options can be changed in the `status_options` list.
 
 ## License
-This project is for educational and internal use by the National Union of Mineworkers.
-
 ---
 *Developed as part of a Work Integrated Learning project.*
