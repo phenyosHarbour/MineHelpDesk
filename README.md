@@ -1,65 +1,66 @@
-MineHelpDesk
+# NUM IT Support Ticket System
 
-MineHelpDesk is a demo IT support ticket management application, initially designed for a trade union, but adaptable for broader company needs. This proof-of-concept version includes limited features and configurations to demonstrate basic functionality. Future adaptations could expand this to a fully configurable IT support tool for any organization.
+![image](https://github.com/user-attachments/assets/48b629e5-3b26-4aca-8200-dfe18c00698d)
+![image](https://github.com/user-attachments/assets/4f0142c4-5467-4f23-b4b1-941569c1458d)
 
-Features
 
-Ticket Submission: Employees can submit IT support tickets by entering key details like name, department, workstation, and a description of the issue.
+A desktop application for the National Union of Mineworkers (NUM) to log, manage, and resolve IT support requests. Built with Python and Tkinter, using SQLite for data storage.
 
-Admin Panel: Admins can review submitted tickets, update their status, and delete resolved tickets.
+## Features
+- Submit IT support tickets with employee details, department, and issue description
+- Admin view to see, update, and delete tickets
+- Status management (Pending, Resolved, High Priority)
+- Simple, modern Tkinter GUI
+- Data stored locally in `support_db.sqlite`
 
-Status Management: Tickets can be marked as "Pending," "Resolved," or "High Priority" for streamlined support handling.
+## Screenshots
+*(Add screenshots here if available)*
 
-SQLite Database: Uses a simple SQLite database to store and manage ticket data.
+## Getting Started
 
-Basic UI: Built with Tkinter, providing a straightforward user interface for basic operations.
+### Prerequisites
+- Python 3.8 or higher (recommended)
+- Tkinter (usually included with Python)
 
-Limitations
+### Installation
+1. Clone this repository or download the source code.
+2. Ensure you have Python installed.
+3. (Optional) Create a virtual environment:
+   ```powershell
+   python -m venv env
+   .\env\Scripts\Activate
+   ```
+4. Install dependencies (if any):
+   ```powershell
+   pip install -r requirements.txt
+   ```
+   *(No external dependencies required for basic usage)*
 
-This application is a limited-feature demo designed for demonstration purposes only:
+### Running the Application
+```powershell
+python main.py
+```
 
-Reduced Functionality: Lacks the advanced features typical of enterprise-level helpdesk software.
+### Packaging as an Executable
+This project includes a `main.spec` file for use with PyInstaller. To build a standalone Windows executable:
+```powershell
+pip install pyinstaller
+pyinstaller main.spec
+```
+The executable will be in the `dist/` folder.
 
-Simplified Database: Uses SQLite for simplicity, without robust security or advanced data handling.
+## Project Structure
+- `main.py` - Main application code
+- `support_db.sqlite` - SQLite database file
+- `main.spec` - PyInstaller spec file
+- `NUM Logo.ico` - Application icon
 
-Basic UI: Limited user interface design without customization options or user authentication.
+## Customization
+- Departments can be edited in the `departments` list in `main.py`.
+- Status options can be changed in the `status_options` list.
 
-Getting Started
+## License
+This project is for educational and internal use by the National Union of Mineworkers.
 
-Requirements
-
-Python 3.x should be installed on your system.
-
-Tkinter library (usually included with Python).
-
-Installation & Setup
-
-Clone or download this repository.
-
-Place the support_db.sqlite database file in the same directory as main.exe.
-
-Run the executable file (main.exe) to launch the application.
-
-Usage
-
-Employee Mode: Employees can submit IT tickets by filling out the form and clicking "Submit Ticket."
-
-Admin Mode: Admins can access the "View Tickets" feature to manage tickets, update statuses, or remove resolved tickets.
-
-Future Development
-
-This application has the potential for future customization to suit a range of business environments. While currently limited, additional features and configurations can be added to meet specific organizational requirements, transforming it into a versatile IT support tool for any company.
-
-Disclaimer
-
-This application is provided as a demo and should not be considered a complete, production-ready solution. Its limited functionalities and configurations do not represent a fully-deployed IT support software product. Instead, this project serves as a foundational base, intended to visualize what a fully-developed application could achieve.
-
-Investigation
-
-The main components of the MineHelpDesk application are:
-
-* **Ticket submission**: Employees can submit IT support tickets by entering key details like name, department, workstation, and a description of the issue. 📝
-* **Admin panel**: Admins can review submitted tickets, update their status, and delete resolved tickets. 🛠️
-* **Status management**: Tickets can be marked as "Pending," "Resolved," or "High Priority" for streamlined support handling. 📊
-* **SQLite database**: Uses a simple SQLite database to store and manage ticket data. 🗄️
-* **Basic UI**: Built with Tkinter, providing a straightforward user interface for basic operations. 🖥️
+---
+*Developed as part of a Work Integrated Learning project.*
